@@ -15,9 +15,9 @@ int main(){
         cout << "Enter the value of the Node: ";
         cin >> val;
         Node *N = new Node;
-        N ->data = val;
+        N -> data = val;
         if(head == nullptr){
-            head  = N;
+            head = N;
             N -> next = head;
         }
         else{
@@ -28,15 +28,17 @@ int main(){
             temp ->next = N;
             N ->next = head;
         }
+    }
         if(head != nullptr){
             Node * temp = head;
-        
         do{
             cout << temp -> data << " ";
+            temp = temp ->next;
         }
-        while(temp != head){
-            temp = temp -> next;
-        }
+        while(temp != head);
     }
+    else{
+        cout << "linked list is empty";
     }
+
 }
